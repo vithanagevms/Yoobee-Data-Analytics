@@ -579,7 +579,7 @@ def perform_advanced_analysis(df):
     # Determine optimal number of clusters using the elbow method
     inertia = []
     silhouette_scores = []
-    k_range = range(2, min(11, len(df) - 1))  # Test 2-10 clusters (or less if small dataset)
+    k_range = range(2, min(11, len(df) - 1))  # Test 2-10 clusters
     
     for k in k_range:
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
